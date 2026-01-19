@@ -328,18 +328,6 @@ bool tud_audio_set_itf_cb(uint8_t rhport, tusb_control_request_t const *p_reques
                 streaming::close_rx();
             }
             break;
-        case ITF_NUM_AUDIO_STREAMING_HOST_RX:
-            if(alt)
-            {
-                streaming::set_tx_format(
-                    g_current_sample_rates[UAC2_ENTITY_LINEIN_CLOCK - UAC2_ENTITY_CLOCK_START],
-                    g_current_resolutions[ITF_NUM_AUDIO_STREAMING_HOST_RX]);
-            }
-            else
-            {
-                streaming::close_tx();
-            }
-            break;
     }
 
     return true;

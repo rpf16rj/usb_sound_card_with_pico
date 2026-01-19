@@ -5,7 +5,7 @@ extern "C"{
 #endif
 
 #define USB_IF_AUDIO_ENABLE     1
-#define USB_IF_CONTROL_ENABLE   1
+#define USB_IF_CONTROL_ENABLE   0
 #if (CFG_TUSB_DEBUG > 0) || PROFILE || TRACE
     #define USB_IF_DEBUG_CDC_ENABLE 1
 #else
